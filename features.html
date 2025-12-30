@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Features</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><h1>⭐ Interactive Crochet Features</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="customizer.html">Pattern Customizer</a>
+    <a href="scarves.html">Scarves</a>
+    <a href="sweaters.html">Sweaters</a>
+    <a href="caps.html">Caps</a>
+    <a href="decorations.html">Decorations</a>
+    <a href="features.html">Interactive Features</a>
+    <a href="game.html">Mini Game</a>
+    <a href="review.html">Reviews</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="cart.html">🛒 Cart (<span id="cartCount">0</span>)</a>
+  </nav>
+
+  <!-- Pattern Customizer -->
+  <section id="customizer">
+    <h2>Pattern Customizer</h2>
+    <div id="previewSquare" class="preview-square"></div>
+    <label>Yarn Color: <input type="color" id="yarnColor" value="#ff69b4"></label><br>
+    <label>Stitch Type:
+      <select id="stitchType">
+        <option value="dashed">Dashed</option>
+        <option value="solid">Solid</option>
+        <option value="double">Double</option>
+      </select>
+    </label><br>
+    <label>Size: <input type="range" id="sizeRange" min="100" max="300" value="200"></label>
+    <textarea id="customDescription" placeholder="Describe your custom design..."></textarea>
+
+    <h3>Generate Yarn Palette from Image</h3>
+    <input type="file" id="imageInput" accept="image/*">
+    <canvas id="colorCanvas" style="display:none;"></canvas>
+    <div id="swatches"></div>
+  </section>
+
+  <!-- 3D Yarn Viewer -->
+  <section id="viewer">
+    <h2>3D Yarn Viewer</h2>
+    <p>Explore yarn textures and patterns in detail.</p>
+    <div id="featureViewer" class="viewer"></div>
+  </section>
+
+  <!-- Gamified Challenges -->
+  <section id="gameFeature">
+    <h2>Mini Game: Guess the Stitch</h2>
+    <div class="discount-note">🏆 Winners will get a 10% discount coupon!</div>
+    <p id="question">Press Start to begin!</p>
+    <div id="options"></div>
+    <p>Score: <span id="score">0</span></p>
+    <button id="startGame" class="btn">Start Game</button>
+    <p id="result"></p>
+  </section>
+
+  <!-- Community Showcase Wall -->
+  <section id="community">
+    <h2>Community Showcase Wall</h2>
+    <p>Upload your crochet projects and share them with others!</p>
+    <input type="file" id="uploadInput" accept="image/*">
+    <button id="addToGallery" class="btn">Upload</button>
+    <div id="gallery"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Crochet Hub. All rights reserved.</p>
+    <p>For further details contact: 📞 0304-5536670 | ✉️ support@crochethub.com</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

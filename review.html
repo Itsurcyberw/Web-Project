@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Reviews</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><h1>⭐ Customer Reviews</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="customizer.html">Pattern Customizer</a>
+    <a href="scarves.html">Scarves</a>
+    <a href="sweaters.html">Sweaters</a>
+    <a href="caps.html">Caps</a>
+    <a href="decorations.html">Decorations</a>
+    <a href="orders.html">Previous Orders</a>
+    <a href="game.html">Mini Game</a>
+    <a href="review.html">Reviews</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="cart.html">🛒 Cart (<span id="cartCount">0</span>)</a>
+  </nav>
+
+  <!-- Review Form -->
+  <section id="reviewForm">
+    <h2>Leave a Review</h2>
+    <input type="text" id="reviewerName" placeholder="Your Name"><br><br>
+    <textarea id="reviewText" placeholder="Write your review here..."></textarea><br><br>
+    <label>Rating:
+      <select id="reviewRating">
+        <option value="5">⭐️⭐️⭐️⭐️⭐️ (5 Stars)</option>
+        <option value="4">⭐️⭐️⭐️⭐️ (4 Stars)</option>
+        <option value="3">⭐️⭐️⭐️ (3 Stars)</option>
+        <option value="2">⭐️⭐️ (2 Stars)</option>
+        <option value="1">⭐️ (1 Star)</option>
+      </select>
+    </label><br><br>
+    <button id="submitReview" class="btn">Submit Review</button>
+  </section>
+
+  <!-- Review List -->
+  <section id="reviewList">
+    <h2>What Our Customers Say</h2>
+    <div id="reviews"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Crochet Hub. All rights reserved.</p>
+    <p>For further details contact: 📞 0304-5536670 | ✉️ support@crochethub.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

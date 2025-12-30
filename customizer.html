@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pattern Customizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><h1>🎨 Pattern Customizer</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="customizer.html">Pattern Customizer</a>
+    <a href="scarves.html">Scarves</a>
+    <a href="sweaters.html">Sweaters</a>
+    <a href="caps.html">Caps</a>
+    <a href="decorations.html">Decorations</a>
+    <a href="orders.html">Previous Orders</a>
+    <a href="game.html">Mini Game</a>
+    <a href="review.html">Reviews</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="cart.html">🛒 Cart (<span id="cartCount">0</span>)</a>
+  </nav>
+
+  <section id="customizer">
+    <h2>Design Your Crochet Item</h2>
+    <div id="previewSquare" class="preview-square"></div>
+    <label>Yarn Color: <input type="color" id="yarnColor" value="#ff69b4"></label><br>
+    <label>Stitch Type:
+      <select id="stitchType">
+        <option value="dashed">Dashed</option>
+        <option value="solid">Solid</option>
+        <option value="double">Double</option>
+      </select>
+    </label><br>
+    <label>Size: <input type="range" id="sizeRange" min="100" max="300" value="200"></label>
+    <textarea id="customDescription" placeholder="Describe your custom design..."></textarea>
+
+    <h3>Generate Yarn Palette from Image</h3>
+    <input type="file" id="imageInput" accept="image/*">
+    <canvas id="colorCanvas" style="display:none;"></canvas>
+    <div id="swatches"></div>
+
+    <br><br>
+    <button class="btn" onclick="alert('Design saved! Add to cart to purchase.')">Save Design</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Crochet Hub. All rights reserved.</p>
+    <p>For further details contact: 📞 0304-5536670 | ✉️ support@crochethub.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

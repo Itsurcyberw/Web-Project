@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#d9b5a3">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Delivery & Payment</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><h1>📦 Delivery & Payment Details</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="customizer.html">Pattern Customizer</a>
+    <a href="scarves.html">Scarves</a>
+    <a href="sweaters.html">Sweaters</a>
+    <a href="caps.html">Caps</a>
+    <a href="decorations.html">Decorations</a>
+    <a href="orders.html">Previous Orders</a>
+    <a href="game.html">Mini Game</a>
+    <a href="review.html">Reviews</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="cart.html">🛒 Cart (<span id="cartCount">0</span>)</a>
+  </nav>
+
+  <section id="deliveryForm">
+    <h2>Enter Your Shipping & Payment Information</h2>
+    <form id="addressForm">
+      <input type="text" id="fullName" placeholder="Full Name" required><br><br>
+      <input type="tel" id="phone" placeholder="Phone Number" required><br><br>
+      <input type="email" id="email" placeholder="Email Address" required><br><br>
+      <input type="text" id="homeAddress" placeholder="Home Address" required><br><br>
+      <input type="text" id="altAddress" placeholder="Alternative Address"><br><br>
+      <input type="tel" id="altPhone" placeholder="Alternative Phone Number"><br><br>
+      <input type="text" id="province" placeholder="Province" required><br><br>
+      <input type="text" id="city" placeholder="City" required><br><br>
+
+      <!-- Payment Options -->
+      <h3>Payment Method</h3>
+      <div class="payment-methods">
+        <label class="payment-option">
+          <input type="radio" name="payment" value="advanceCash" required>
+          <div class="payment-box">
+            <div class="payment-icon">💰</div>
+            <div class="payment-name">Advance Cash</div>
+            <div class="payment-desc">₨1000 upfront, rest on delivery</div>
+          </div>
+        </label>
+
+        <label class="payment-option">
+          <input type="radio" name="payment" value="creditCard">
+          <div class="payment-box">
+            <div class="payment-icon">💳</div>
+            <div class="payment-name">Credit Card</div>
+            <div class="payment-desc">Visa, Mastercard</div>
+          </div>
+        </label>
+
+        <label class="payment-option">
+          <input type="radio" name="payment" value="easyPaisa">
+          <div class="payment-box">
+            <div class="payment-icon">📱</div>
+            <div class="payment-name">EasyPaisa</div>
+            <div class="payment-desc">Mobile Wallet</div>
+          </div>
+        </label>
+
+        <label class="payment-option">
+          <input type="radio" name="payment" value="jazzCash">
+          <div class="payment-box">
+            <div class="payment-icon">📲</div>
+            <div class="payment-name">JazzCash</div>
+            <div class="payment-desc">Mobile Wallet</div>
+          </div>
+        </label>
+      </div><br>
+
+      <!-- Credit Card Details -->
+      <div id="creditCardFields" style="display:none;">
+        <h4>Credit Card Information</h4>
+        <input type="text" id="cardNumber" placeholder="Credit Card Number (16 digits)" required><br><br>
+        <input type="text" id="cardHolder" placeholder="Cardholder Name" required><br><br>
+        <input type="text" id="expiryDate" placeholder="Expiry Date (MM/YY)" required><br><br>
+        <input type="text" id="cvv" placeholder="CVV (3 digits)" required><br><br>
+      </div>
+
+      <!-- EasyPaisa Details -->
+      <div id="easyPaisaFields" style="display:none;">
+        <h4>EasyPaisa Information</h4>
+        <input type="tel" id="easyPaisaPhone" placeholder="EasyPaisa Phone Number" required><br><br>
+      </div>
+
+      <!-- JazzCash Details -->
+      <div id="jazzCashFields" style="display:none;">
+        <h4>JazzCash Information</h4>
+        <input type="tel" id="jazzCashPhone" placeholder="JazzCash Phone Number" required><br><br>
+      </div>
+
+      <button type="submit" class="btn">Save Details</button>
+    </form>
+    <p id="addressResult"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Crochet Hub. All rights reserved.</p>
+    <p>For further details contact: 📞 0304-5536670 | ✉️ support@crochethub.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
